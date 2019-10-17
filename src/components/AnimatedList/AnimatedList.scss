@@ -1,0 +1,113 @@
+@import '../../themify.scss';
+.animatedList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    overflow-y: auto;
+    width: 100vw;
+    box-sizing: border-box;
+    margin-top: 1em;
+    ul {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        max-width: 720px;
+        padding: 0 1em;
+    }
+    .animatedItem {
+        width: 100%;
+        margin-bottom: 1em;
+        padding: 1em;
+        border-radius: 4px;
+        display: flex;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        @include themify($themes) {
+            background-color: themed('alternativeBackgroundColor');
+            color: themed('textColor');
+            border: 1px solid themed('borderColor');
+        }
+        &:focus,
+        &:hover {
+            @include themify($themes) {
+                border: 1px solid themed('primaryColor');
+            }
+        }
+        .image {
+            width: 180px;
+            height: 180px;
+            min-width: 180px;
+            min-height: 180px;
+            border-radius: 50%;
+            margin: auto 0.3em;
+            @include themify($themes) {
+                border: 1px solid themed('borderColor');
+            }
+        }
+        .description {
+            width: 100%;
+            padding: 1em;
+            overflow-y: hidden;
+            li {
+                margin-left: 1em;
+            }
+            p {
+                margin: 0.4em 0;
+            }
+            .title {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.2em;
+                margin: 0.6em 0;
+            }
+            .label {
+                margin-right: 0.2em;
+                &:after {
+                    content: ':';
+                    text-decoration: none;
+                }
+            }
+            .instructions {
+                line-height: 1.3em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .instructions.collapsed {
+                max-height: 100px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 5;
+            }
+        }
+        .description.expanded {
+            max-height: 500px;
+            transition: all 0.5s ease;
+            overflow-y: auto;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .animatedList {
+        .animatedItem {
+            flex-direction: column;
+            align-items: center;
+            width: 90vw;
+            margin: 0 auto 1em;
+            .image {
+                width: 140px;
+                height: 140px;
+                margin: 0.5em;
+            }
+            .info {
+                padding: 0 1em;
+                .title {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

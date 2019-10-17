@@ -9,7 +9,10 @@ const App: React.FC = () => {
 
     const onSearcherChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const value = event.target.value;
-        if (value.length > 2) dispatch(search(filter));
+
+        if (value.length > 2) dispatch(search(value));
+        else if (!value.length) dispatch(clearCocktails());
+
         setFilter(value);
     };
 
@@ -19,8 +22,16 @@ const App: React.FC = () => {
     };
     return (
         <div className="searcher">
-            <input value={filter} onChange={onSearcherChange} />
-            {filter && <button onClick={clearSearcher}>x</button>}
+            <input
+                placeholder="Search your favorite cocktail"
+                value={filter}
+                onChange={onSearcherChange}
+            />
+            {filter && (
+                <button title="Clear" className="clearButton" onClick={clearSearcher}>
+                    x
+                </button>
+            )}
         </div>
     );
 };

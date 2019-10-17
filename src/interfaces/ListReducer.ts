@@ -6,7 +6,7 @@ export enum ActionTypes {
 }
 export interface State {
     list: Array<Cocktail>;
-    status: 'empty' | 'fetching' | 'fetched';
+    status: 'initial' | 'empty' | 'fetching' | 'fetched';
 }
 export interface Action {
     type: ActionTypes.clearList | ActionTypes.requestCocktails | ActionTypes.receiveCocktails;

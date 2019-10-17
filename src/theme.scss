@@ -1,0 +1,30 @@
+@mixin themify($property, $key, $themes: $themes) {
+    // Iterate over the themes
+    @each $theme, $colors in $themes {
+        // Create a selector (e.g. `.media.theme-unicorn, .theme-unicorn .media`)
+        &.theme-#{$theme},
+        .theme-#{$theme} & {
+            // Output the declaration
+            #{$property}: map-get($colors, $key);
+        }
+    }
+}
+
+$themes: (
+    light: (
+        backgroundColor: #f4f4f4,
+        alternativeBackgroundColor: #fff,
+        textColor: #4f4f4f,
+        borderColor: #e8e8e8,
+        shadowColor: #9ecece,
+        primaryColor: #ED5E93,
+    ),
+    dark: (
+        backgroundColor: #222,
+        alternativeBackgroundColor: #444,
+        textColor: #a8a8a8,
+        borderColor: #555,
+        shadowColor: #dedede,
+        primaryColor: #ED5E93,
+    ),
+);

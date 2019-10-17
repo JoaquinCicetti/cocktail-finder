@@ -1,0 +1,46 @@
+@import '../../themify.scss';
+
+.info {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 4em auto;
+    @include themify($themes) {
+        color: themed('textColor');
+    }
+    .about {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include themify($themes) {
+            color: themed('textColor');
+            border: 1px solid themed('textColor');
+        }
+        .appName {
+            font-size: 1.3em;
+            @include themify($themes) {
+                color: themed('primaryColor');
+            }
+        }
+        .version {
+            line-height: 20px;
+            margin: 0;
+        }
+        a.version {
+            text-decoration: none;
+            @include themify($themes) {
+                color: themed('primaryColor');
+            }
+        }
+        hr {
+            width: 80%;
+            transition: border-color 0.5s ease;
+            border-width: 1px 0 0 0;
+            @include themify($themes) {
+                border-top: 1px solid themed('borderColor');
+            }
+        }
+    }
+}

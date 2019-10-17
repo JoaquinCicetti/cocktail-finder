@@ -2,21 +2,21 @@ import * as ListReducer from '../../interfaces/ListReducer';
 
 const initialState: ListReducer.State = {
     list: [],
-    status: 'empty',
+    status: 'initial',
 };
 
 const listReducer = (state = initialState, action: ListReducer.Action): ListReducer.State => {
     switch (action.type) {
         case ListReducer.ActionTypes.clearList: {
             return {
-                ...state,
+                status: 'initial',
                 list: [],
             };
         }
         case ListReducer.ActionTypes.receiveCocktails: {
             return {
                 list: action.payload ? action.payload : [],
-                status: 'fetched',
+                status: action.payload && action.payload.length ? 'fetched' : 'empty',
             };
         }
         case ListReducer.ActionTypes.requestCocktails: {
