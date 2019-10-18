@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/cocktail-finder/static/css/main.eb4d9fc9.chunk.css",
-    "main.js": "/cocktail-finder/static/js/main.103793f9.chunk.js",
-    "main.js.map": "/cocktail-finder/static/js/main.103793f9.chunk.js.map",
+    "main.css": "/cocktail-finder/static/css/main.2bd21d25.chunk.css",
+    "main.js": "/cocktail-finder/static/js/main.9d143737.chunk.js",
+    "main.js.map": "/cocktail-finder/static/js/main.9d143737.chunk.js.map",
     "runtime-main.js": "/cocktail-finder/static/js/runtime-main.fed47938.js",
     "runtime-main.js.map": "/cocktail-finder/static/js/runtime-main.fed47938.js.map",
     "static/js/2.04529b86.chunk.js": "/cocktail-finder/static/js/2.04529b86.chunk.js",
     "static/js/2.04529b86.chunk.js.map": "/cocktail-finder/static/js/2.04529b86.chunk.js.map",
     "index.html": "/cocktail-finder/index.html",
-    "precache-manifest.c73439a7c76d24e74b598c4e6e4df22f.js": "/cocktail-finder/precache-manifest.c73439a7c76d24e74b598c4e6e4df22f.js",
+    "precache-manifest.4acbb5aeb841f8879666d9281141b779.js": "/cocktail-finder/precache-manifest.4acbb5aeb841f8879666d9281141b779.js",
     "service-worker.js": "/cocktail-finder/service-worker.js",
-    "static/css/main.eb4d9fc9.chunk.css.map": "/cocktail-finder/static/css/main.eb4d9fc9.chunk.css.map"
+    "static/css/main.2bd21d25.chunk.css.map": "/cocktail-finder/static/css/main.2bd21d25.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.fed47938.js",
     "static/js/2.04529b86.chunk.js",
-    "static/css/main.eb4d9fc9.chunk.css",
-    "static/js/main.103793f9.chunk.js"
+    "static/css/main.2bd21d25.chunk.css",
+    "static/js/main.9d143737.chunk.js"
   ]
 }
