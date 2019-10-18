@@ -11,12 +11,13 @@ const Info: React.FC<Props> = ({ status }) => {
             {status === 'empty' && <span>No result</span>}
             {status === 'initial' && (
                 <div className="about">
+                    <img src="/logo-256.png" alt="logo" className="logo" />
                     <b className="appName">Cocktail Finder</b>
                     <hr />
                     <p className="version">React: 16.10.2</p>
                     <p className="version">Redux: 4.0.4</p>
                     <p className="version">Redux-thunk: 2.3.0</p>
-                    <p className="version">Redux-redux: 7.1.1</p>
+                    <p className="version">React-redux: 7.1.1</p>
                     <p className="version">Typescript: 3.6.4</p>
                     <p className="version">React-pose: 4.0.9</p>
 

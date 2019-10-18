@@ -19,6 +19,10 @@
             color: themed('textColor');
             border: 1px solid themed('textColor');
         }
+        .logo{
+            width: 48px;
+            margin: .5em auto;
+        }
         .appName {
             font-size: 1.3em;
             @include themify($themes) {
@@ -36,7 +40,7 @@
             }
         }
         hr {
-            width: 80%;
+            width: 60%;
             transition: border-color $animationTime ease;
             border-width: 1px 0 0 0;
             @include themify($themes) {
