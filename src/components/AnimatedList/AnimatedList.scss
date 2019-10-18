@@ -1,4 +1,5 @@
 @import '../../themify.scss';
+@import '../../theme.scss';
 .animatedList {
     display: flex;
     flex-direction: column;
@@ -24,7 +25,7 @@
         display: flex;
         justify-content: flex-start;
         box-sizing: border-box;
-        transition: all 0.5s ease;
+        transition: all $animationTime ease;
         cursor: pointer;
         @include themify($themes) {
             background-color: themed('alternativeBackgroundColor');
@@ -85,7 +86,7 @@
         }
         .description.expanded {
             max-height: 500px;
-            transition: all 0.5s ease;
+            transition: all $animationTime ease;
             overflow-y: auto;
         }
     }

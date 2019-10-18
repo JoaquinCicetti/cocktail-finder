@@ -1,10 +1,10 @@
 @import '../../themify.scss';
-
+@import '../../theme.scss';
 .toggleButton {
     position: fixed;
     bottom: 1em;
     left: 1em;
-    
+
     input[type='checkbox'] {
         visibility: hidden;
     }
@@ -16,7 +16,7 @@
         top: 0;
         left: 0;
         border-radius: 20px;
-        transition: background-color 0.5s ease;
+        transition: background-color $animationTime ease;
         @include themify($themes) {
             background-color: themed('borderColor');
         }
@@ -29,7 +29,7 @@
             top: -2px;
             left: -1px;
             border-radius: 50%;
-            transition: all 0.5s ease;
+            transition: all $animationTime ease;
             @include themify($themes) {
                 background-color: themed('primaryColor');
                 border: 1px solid themed('borderColor');

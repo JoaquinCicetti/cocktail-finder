@@ -1,15 +1,5 @@
-@mixin themify($property, $key, $themes: $themes) {
-    // Iterate over the themes
-    @each $theme, $colors in $themes {
-        // Create a selector (e.g. `.media.theme-unicorn, .theme-unicorn .media`)
-        &.theme-#{$theme},
-        .theme-#{$theme} & {
-            // Output the declaration
-            #{$property}: map-get($colors, $key);
-        }
-    }
-}
 
+$animationTime: .200s;
 $themes: (
     light: (
         backgroundColor: #f4f4f4,
@@ -17,7 +7,7 @@ $themes: (
         textColor: #4f4f4f,
         borderColor: #e8e8e8,
         shadowColor: #9ecece,
-        primaryColor: #ED5E93,
+        primaryColor: #ed5e93,
     ),
     dark: (
         backgroundColor: #222,
@@ -25,6 +15,6 @@ $themes: (
         textColor: #a8a8a8,
         borderColor: #555,
         shadowColor: #dedede,
-        primaryColor: #ED5E93,
+        primaryColor: #ed5e93,
     ),
 );

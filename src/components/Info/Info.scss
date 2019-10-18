@@ -1,4 +1,5 @@
 @import '../../themify.scss';
+@import '../../theme.scss';
 
 .info {
     box-sizing: border-box;
@@ -36,7 +37,7 @@
         }
         hr {
             width: 80%;
-            transition: border-color 0.5s ease;
+            transition: border-color $animationTime ease;
             border-width: 1px 0 0 0;
             @include themify($themes) {
                 border-top: 1px solid themed('borderColor');
