@@ -38,7 +38,7 @@ export const search = (
             if (TIMESTAMP < sent) {
                 dispatch(receiveCocktails(json.drinks));
                 TIMESTAMP = sent;
-            } else console.log('se rompio');
+            }
         })
         .catch(error => console.log('An error occurred.', error));
 };

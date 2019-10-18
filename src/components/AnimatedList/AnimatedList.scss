@@ -17,6 +17,7 @@
         max-width: 720px;
         padding: 0 1em;
     }
+
     .animatedItem {
         width: 100%;
         margin-bottom: 1em;
@@ -32,12 +33,7 @@
             color: themed('textColor');
             border: 1px solid themed('borderColor');
         }
-        &:focus,
-        &:hover {
-            @include themify($themes) {
-                border: 1px solid themed('primaryColor');
-            }
-        }
+
         .image {
             width: 180px;
             height: 180px;
@@ -94,14 +90,13 @@
 @media (max-width: 480px) {
     .animatedList {
         .animatedItem {
+            width: 80vw;
             flex-direction: column;
             align-items: center;
-            width: 90vw;
-            margin: 0 auto 1em;
+            margin: 0 auto 2em;
             .image {
-                width: 140px;
-                height: 140px;
-                margin: 0.5em;
+                min-width: 140px;
+                min-height: 140px;
             }
             .info {
                 padding: 0 1em;
