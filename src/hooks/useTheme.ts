@@ -4,8 +4,10 @@ function useTheme() {
     const { theme, setTheme } = useContext(ThemeContext);
 
     const toggleTheme = useCallback(() => {
-        if (theme === Themes.dark) setTheme(Themes.light);
-        else setTheme(Themes.dark);
+        const newTheme = theme === Themes.light ? Themes.dark : Themes.light;
+        setTheme(newTheme);
+
+        if (localStorage) localStorage.setItem('theme', newTheme);
     }, [theme, setTheme]);
 
     return {

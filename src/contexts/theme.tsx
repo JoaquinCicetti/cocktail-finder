@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 enum Themes {
     dark = 'dark',
     light = 'light',
@@ -20,6 +20,14 @@ const ThemeProvider: React.FC = ({ children }) => {
         theme,
         setTheme,
     };
+
+    // load last theme
+    useEffect(() => {
+        if (localStorage) {
+            const loadedTheme = localStorage.getItem('theme');
+            if (loadedTheme === Themes.dark || loadedTheme === Themes.light) setTheme(loadedTheme);
+        }
+    }, []);
     return <ThemeContext.Provider value={themeHandler}>{children}</ThemeContext.Provider>;
 };
 
