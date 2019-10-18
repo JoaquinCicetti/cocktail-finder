@@ -2,7 +2,7 @@
     "name": "cocktail-finder",
     "version": "0.1.0",
     "private": false,
-    "homepage": "https://github.com/JoaquinCicetti/cocktail-finder",
+    "homepage": "https://joaquincicetti.github.io/cocktail-finder/",
     "dependencies": {
         "@types/jest": "24.0.19",
         "@types/node": "12.7.12",
