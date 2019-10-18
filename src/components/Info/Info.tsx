@@ -5,13 +5,14 @@ interface Props {
     status: string;
 }
 const Info: React.FC<Props> = ({ status }) => {
+    const urlPrefix = process.env.NODE_ENV === 'development' ? '' : '/cocktail-finder';
     return (
         <div className="info">
             {status === 'fetching' && <span>Searching...</span>}
             {status === 'empty' && <span>No result</span>}
             {status === 'initial' && (
                 <div className="about">
-                    <img src="/logo-256.png" alt="logo" className="logo" />
+                    <img src={`${urlPrefix}/logo-256.png`} alt="logo" className="logo" />
                     <b className="appName">Cocktail Finder</b>
                     <hr />
                     <p className="version">React: 16.10.2</p>
