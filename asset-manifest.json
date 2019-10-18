@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/JoaquinCicetti/cocktail-finder/static/css/main.eb4d9fc9.chunk.css",
+    "main.js": "/JoaquinCicetti/cocktail-finder/static/js/main.909e971b.chunk.js",
+    "main.js.map": "/JoaquinCicetti/cocktail-finder/static/js/main.909e971b.chunk.js.map",
+    "runtime-main.js": "/JoaquinCicetti/cocktail-finder/static/js/runtime-main.ad5e93dc.js",
+    "runtime-main.js.map": "/JoaquinCicetti/cocktail-finder/static/js/runtime-main.ad5e93dc.js.map",
+    "static/js/2.04529b86.chunk.js": "/JoaquinCicetti/cocktail-finder/static/js/2.04529b86.chunk.js",
+    "static/js/2.04529b86.chunk.js.map": "/JoaquinCicetti/cocktail-finder/static/js/2.04529b86.chunk.js.map",
+    "index.html": "/JoaquinCicetti/cocktail-finder/index.html",
+    "precache-manifest.f8e5b075049f3b2abcb2a8811abd60ae.js": "/JoaquinCicetti/cocktail-finder/precache-manifest.f8e5b075049f3b2abcb2a8811abd60ae.js",
+    "service-worker.js": "/JoaquinCicetti/cocktail-finder/service-worker.js",
+    "static/css/main.eb4d9fc9.chunk.css.map": "/JoaquinCicetti/cocktail-finder/static/css/main.eb4d9fc9.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad5e93dc.js",
+    "static/js/2.04529b86.chunk.js",
+    "static/css/main.eb4d9fc9.chunk.css",
+    "static/js/main.909e971b.chunk.js"
+  ]
+}
