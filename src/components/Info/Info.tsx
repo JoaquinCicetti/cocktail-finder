@@ -17,10 +17,11 @@ const Info: React.FC<Props> = ({ status }) => {
                     <hr />
                     <p className="version">React: 16.10.2</p>
                     <p className="version">Redux: 4.0.4</p>
-                    <p className="version">Redux-thunk: 2.3.0</p>
                     <p className="version">React-redux: 7.1.1</p>
-                    <p className="version">Typescript: 3.6.4</p>
+                    <p className="version">Redux-thunk: 2.3.0</p>
+                    <p className="version">Node-sass: 4.12.0</p>
                     <p className="version">React-pose: 4.0.9</p>
+                    <p className="version">Typescript: 3.6.4</p>
 
                     <hr />
                     <a

@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Exo2.0-Light.otf') format('otf');
+    src: url('./fonts/Exo2.0-Light.otf') format('truetype');
+}
+
 body {
     margin: auto;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    & *{
+        font-family: Exo, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
 }

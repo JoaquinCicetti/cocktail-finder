@@ -60,6 +60,9 @@
                 font-weight: bold;
                 font-size: 1.2em;
                 margin: 0.6em 0;
+                @include themify($themes) {
+                    color: themed('primaryColor');
+                }
             }
             .label {
                 margin-right: 0.2em;
