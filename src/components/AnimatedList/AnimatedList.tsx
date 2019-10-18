@@ -16,7 +16,7 @@ const List = posed.ul({
         opacity: 1,
         transition: { default: { duration: 100 } },
         beforeChildren: true,
-        staggerChildren: 100,
+        staggerChildren: 120,
     },
 });
 const AnimatedItem = posed.a({
@@ -87,7 +87,7 @@ const AnimatedList: React.FC<Props> = ({ status, list }) => {
                                 <Item
                                     className="animatedItem"
                                     key={`clientItem_${idDrink}`}
-                                    onClick={() => handleClick(idDrink)}>
+                                    onClick={(e: Event) => handleClick(idDrink)}>
                                     <img src={strDrinkThumb} alt={strDrink} className="image" />
                                     <div className={`description ${status}`}>
                                         <p className="title">{strDrink}</p>
