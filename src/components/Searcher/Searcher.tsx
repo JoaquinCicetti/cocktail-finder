@@ -1,32 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { search, clearCocktails } from './../../redux/actions';
-import posed from 'react-pose';
-import { tween } from 'popmotion';
-import { interpolate } from 'flubber';
-import Icons from './Icons';
+import { MorphingIcon } from '../';
 import './Searcher.scss';
 
-type Transition = ({ from, to }: { from: number; to: number }) => any;
-const morphTransition: Transition = ({ from, to }) =>
-    tween({
-        from: 0,
-        to: 1,
-        duration: 250,
-    }).pipe(interpolate(from, to));
-const Paths = {
-    searching: {
-        d: Icons.searching,
-        transition: morphTransition,
-    },
-    clear: {
-        d: Icons.clear,
-        transition: morphTransition,
-    },
-};
-const Icon = posed.path(Paths);
-
-const App: React.FC = () => {
+const Searcher: React.FC = () => {
     const [filter, setFilter] = useState('');
     const dispatch = useDispatch();
     const inputRef = useRef<HTMLInputElement>(null);
@@ -54,12 +32,10 @@ const App: React.FC = () => {
                 ref={inputRef}
             />
             <button title="Clear" className="clearButton" onClick={clearSearcher}>
-                <svg width="24" height="24" viewBox="-4 -24 100 100">
-                    <Icon pose={filter ? 'clear' : 'searching'} />
-                </svg>
+                <MorphingIcon icon={filter ? 'clear' : 'searching'} />
             </button>
         </div>
     );
 };
 
-export default App;
+export default Searcher;

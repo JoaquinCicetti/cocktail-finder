@@ -25,3 +25,5 @@ yarn-error.log*
 .prettierrc
 tsconfig.json
 .eslintrc.json
+
+src/configs/

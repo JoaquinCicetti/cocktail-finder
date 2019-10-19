@@ -1,4 +1,5 @@
 import React from 'react';
+import { MorphingIcon } from '../';
 import './ToggleButton.scss';
 
 interface Props {
@@ -6,15 +7,17 @@ interface Props {
     toggle: () => void;
 }
 const ToggleButton: React.FC<Props> = ({ checked, toggle }) => {
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleChange = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
         toggle();
     };
     return (
-        <div className="toggleButton">
-            <label htmlFor="_toggleButton" className={checked ? 'checked' : ''} />
-            <input id="_toggleButton" type="checkbox" checked={checked} onChange={handleChange} />
-        </div>
+        <button onClick={handleChange} className="toggleButton">
+            <MorphingIcon width={32} height={32} icon={checked ? 'sun' : 'moon'} />
+        </button>
     );
 };
 
 export default ToggleButton;
+
+//<label htmlFor="_toggleButton" className={checked ? 'checked' : ''} />
+//<input id="_toggleButton" type="checkbox" checked={checked} onChange={handleChange} />

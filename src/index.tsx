@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import store from './redux/store';
 import { App } from './components';
 import { ThemeProvider } from './contexts/theme';
-import './index.scss';
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
+import {store, rrfProps} from './redux/store';
 
+import './index.scss';
 ReactDOM.render(
     <Provider store={store}>
         <ThemeProvider>
-            <App />
+            <ReactReduxFirebaseProvider {...rrfProps}>
+                <App />
+            </ReactReduxFirebaseProvider>
         </ThemeProvider>
     </Provider>,
     document.getElementById('root'),

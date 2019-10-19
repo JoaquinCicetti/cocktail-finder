@@ -1,0 +1,38 @@
+@import '../../themify.scss';
+@import '../../theme.scss';
+.favoritesList {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0.3em;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 50px;
+
+    ul {
+        padding: 0;
+        display: flex;
+    }
+    .thumb {
+        margin: 0.2em;
+        border-radius: 50%;
+        max-width: 48px;
+        max-height: 48px;
+        display: block;
+        cursor: pointer;
+        transition: all $animationTime ease;
+        &:hover {
+            filter: grayscale(1);
+            transform: scale(1.1);
+            + &:after {
+                @include themify($themes) {
+                    background: red;
+                }
+                width: 100px;
+                content: 'X';
+            }
+        }
+    }
+}

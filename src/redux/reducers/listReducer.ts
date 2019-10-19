@@ -25,7 +25,18 @@ const listReducer = (state = initialState, action: ListReducer.Action): ListRedu
                 status: `fetching`,
             };
         }
-
+        case ListReducer.ActionTypes.saving: {
+            return {
+                ...state,
+                status: `saving`,
+            };
+        }
+        case ListReducer.ActionTypes.saved: {
+            return {
+                ...state,
+                status: `saved`,
+            };
+        }
         default:
             return state;
     }

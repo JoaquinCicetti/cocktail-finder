@@ -1,0 +1,16 @@
+@import '../../themify.scss';
+
+.morphingIcon {
+    @include themify($themes) {
+        fill: themed('primaryColor');
+    }
+    display: flex;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    .icon{
+        margin: auto;
+        text-align: center;
+    }
+}

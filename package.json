@@ -4,6 +4,7 @@
     "private": false,
     "homepage": "https://joaquincicetti.github.io/cocktail-finder/",
     "dependencies": {
+        "firebase": "^7.2.1",
         "flubber": "^0.4.2",
         "gh-pages": "^2.1.1",
         "node-sass": "^4.12.0",
@@ -12,8 +13,10 @@
         "react-dom": "^16.10.2",
         "react-pose": "^4.0.9",
         "react-redux": "^7.1.1",
+        "react-redux-firebase": "^3.0.2",
         "react-scripts": "3.2.0",
         "redux": "^4.0.4",
+        "redux-firestore": "^0.9.0",
         "redux-thunk": "^2.3.0"
     },
     "scripts": {
@@ -40,11 +43,11 @@
         ]
     },
     "devDependencies": {
-        "typescript": "3.6.4",
         "@types/jest": "24.0.19",
         "@types/node": "12.7.12",
         "@types/react": "16.9.7",
         "@types/react-dom": "16.9.2",
-        "@types/react-redux": "^7.1.4"
+        "@types/react-redux": "^7.1.4",
+        "typescript": "3.6.4"
     }
 }

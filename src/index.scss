@@ -8,7 +8,12 @@
 
 body {
     margin: auto;
-    & *{
+    overflow-y: hidden;
+    & * {
         font-family: Exo, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     }
+}
+a, button, input, label {
+    //  background on touch in mobile
+    -webkit-tap-highlight-color: transparent;
 }

@@ -25,9 +25,14 @@ export const receiveCocktails = (cocktails: Array<Cocktail>) => ({
 // send search request
 export const search = (
     value: string,
-): ThunkAction<void, ListReducer.State, null, Action<string>> => dispatch => {
+): ThunkAction<void, ListReducer.State, null, Action<string>> => (
+    dispatch,
+    getState,
+    getFirebase,
+) => {
     // set status
     dispatch(requestCocktails(value));
+    // request timestamp
     const sent = new Date().getTime();
     // return a new promise
     return fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
@@ -38,6 +43,8 @@ export const search = (
             if (TIMESTAMP < sent) {
                 dispatch(receiveCocktails(json.drinks));
                 TIMESTAMP = sent;
+            } else {
+                console.warn('filtered old request');
             }
         })
         .catch(error => console.log('An error occurred.', error));

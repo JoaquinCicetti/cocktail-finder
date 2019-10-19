@@ -2,47 +2,18 @@
 @import '../../theme.scss';
 .toggleButton {
     position: fixed;
-    bottom: 74px;
-    left: -10px;
-    transform: rotate(45deg);
-
-    input[type='checkbox'] {
-        visibility: hidden;
+    bottom: 0.5em;
+    left: 0.5em;
+    background: none;
+    border-radius: 50%;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+    @include themify($themes) {
+        background: themed('borderColor');
     }
-    label {
-        cursor: pointer;
-        width: 10em;
-        height: 10em;
-        position: absolute;
-        transition: background-color $animationTime ease;
-        @include themify($themes) {
-            background-color: themed('borderColor');
-        }
-        &:before {
-            content: 'theme';
-            margin-left: 46px;
-            margin-top: 1em;
-            height: 0;
-            position: absolute;
-        }
-        &:after {
-            position: absolute;
-            cursor: pointer;
-            content: '';
-
-            width: 10em;
-            height: 3em;
-            top: 3em;
-            transition: all $animationTime ease;
-            @include themify($themes) {
-                background-color: themed('primaryColor');
-                border: 1px solid themed('borderColor');
-            }
-        }
-    }
-    label.checked {
-        &:after {
-            top: 2em;
-        }
+    &:active,
+    &:focus {
+        outline: none;
     }
 }
