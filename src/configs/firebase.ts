@@ -1,17 +1,16 @@
 // firebase config
 const fbConfig = {
-    apiKey:
-        'AAAA7Tqa77E:APA91bEtStwP8blFilYk_Ujnm-Jg3iCTerGNz3aswwWH4yvUhbjIOE4STqfILWr-5fJZoYUDa9F1q9a6HwBAsjj9MYhpE7uoXYEvuPvDXNWc-KTrX49-LXQqAJ6xZBsWYeEoys9bATem',
-    authDomain: 'cocktail-finder.firebaseapp.com',
-    databaseURL: 'https://cocktail-finder.firebaseio.com',
-    storageBucket: 'gs://cocktail-finder.appspot.com',
-    messagingSenderId: '1018890481585',
-    projectId: 'cocktail-finder',
+    apiKey: 'AIzaSyDD9XbN82AKMIgGtklwA-i_uaxSm9Mbob0',
+    authDomain: 'portfolio-816a0.firebaseapp.com',
+    databaseURL: 'https://portfolio-816a0.firebaseio.com',
+    projectId: 'portfolio-816a0',
+    storageBucket: 'portfolio-816a0.appspot.com',
+    messagingSenderId: '449065180107',
+    appId: '1:449065180107:web:0870651ae6ce3141f9f44e',
+    measurementId: 'G-C80R184EEG',
 };
 // react-redux-firebase config
 const rrfConfig = {
     userProfile: 'users',
-    // useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
-    // enableClaims: true // Get custom claims along with the profile
 };
 export { fbConfig, rrfConfig };

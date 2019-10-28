@@ -54,7 +54,7 @@ const AnimatedList: React.FC = () => {
         } else {
             setSelected(id);
             firebase
-                .ref('favorites')
+                .ref('/cocktail-favorites')
                 .push({ timestamp: new Date().getDate(), thumb })
                 .catch((e: string) => {
                     console.warn('error', e);

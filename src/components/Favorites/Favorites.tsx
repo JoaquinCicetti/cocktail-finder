@@ -38,13 +38,12 @@ const AnimatedItem = posed.a({
 });
 
 const Favorites: React.FC = () => {
-    useFirebaseConnect('favorites');
+    useFirebaseConnect('cocktail-favorites');
     const firebase = useFirebase();
-    const favorites = useSelector((state: FirebaseState) => state.firebase.ordered.favorites);
-
+    const favorites = useSelector((state: FirebaseState) => state.firebase.ordered['cocktail-favorites']);
     const handleClick = (id: string) => {
         firebase
-            .ref(`favorites/${id}`)
+            .ref(`cocktail-favorites/${id}`)
             .remove()
             .catch((e: string) => {
                 console.warn('error', e);
