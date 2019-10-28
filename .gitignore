@@ -26,4 +26,4 @@ yarn-error.log*
 tsconfig.json
 .eslintrc.json
 
-src/configs/
+src/configs
